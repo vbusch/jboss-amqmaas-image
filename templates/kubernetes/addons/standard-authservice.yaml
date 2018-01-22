@@ -38,7 +38,7 @@ items:
               secretKeyRef:
                 key: admin.password
                 name: keycloak-credentials
-          image: docker-registry.engineering.redhat.com/jboss-amqmaas-1/amqmaas10-auth-openshift:dev
+          image: docker-registry.engineering.redhat.com/jboss-amqmaas-1/amqmaas10-auth-openshift:tp
           livenessProbe:
             httpGet:
               path: /
@@ -101,7 +101,7 @@ items:
               secretKeyRef:
                 key: tls.crt
                 name: standard-authservice-cert
-          image: docker-registry.engineering.redhat.com/jboss-amqmaas-1/amqmaas10-auth-controller-openshift:dev
+          image: docker-registry.engineering.redhat.com/jboss-amqmaas-1/amqmaas10-auth-controller-openshift:to
           name: keycloak-controller
           resources:
             limits:

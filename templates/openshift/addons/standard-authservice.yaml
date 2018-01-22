@@ -145,13 +145,13 @@ objects:
 parameters:
 - description: The docker image to use for the 'standard' auth service
   name: STANDARD_AUTHSERVICE_IMAGE
-  value: docker-registry.engineering.redhat.com/jboss-amqmaas-1/amqmaas10-auth-openshift:dev
+  value: docker-registry.engineering.redhat.com/jboss-amqmaas-1/amqmaas10-auth-openshift:tp
 - description: The secret where keycloak credentials are stored
   name: KEYCLOAK_SECRET_NAME
   value: keycloak-credentials
 - description: The docker image to use for the keycloak controller
   name: KEYCLOAK_CONTROLLER_IMAGE
-  value: docker-registry.engineering.redhat.com/jboss-amqmaas-1/amqmaas10-auth-controller-openshift:dev
+  value: docker-registry.engineering.redhat.com/jboss-amqmaas-1/amqmaas10-auth-controller-openshift:tp
 - description: The secret containing the tls certificate and key
   name: STANDARD_AUTHSERVICE_SECRET_NAME
   value: standard-authservice-cert
