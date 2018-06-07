@@ -1,19 +1,9 @@
-SUBDIRS=standard-controller address-controller agent mqtt-gateway mqtt-lwt router router-metrics topic-forwarder none-authservice auth-controller auth-server
-# TODO: enable broker when we have working artifacts
-CENTOS_SUBDIRS=base base-epel base-java base-nodejs
-RHEL_SUBDIRS= qpid-proton
-#
+SUBDIRS=qpid-proton standard-controller address-controller agent mqtt-gateway mqtt-lwt router router-metrics topic-forwarder none-authservice auth-controller auth-server
 
 all:
 	for dir in $(CENTOS_SUBDIRS) $(SUBDIRS); do \
 		$(MAKE) -C $$dir; \
 	done
-
-buildrhel:
-#	$(MAKE) -C $$dir build_rhel
-	for dir in $(SUBDIRS); do \
-		$(MAKE) build_rhel -C $$dir; \
-	done	
 
 pushall:
 	for dir in $(SUBDIRS); do \
